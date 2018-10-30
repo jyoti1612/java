@@ -1,0 +1,66 @@
+package test;
+import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		
+		//1. To print ascci value of char
+		System.out.println("\nTo print ascci value of char");
+        char ch = 'a';
+        int ascii = ch;
+        // You can also cast char to int
+        int castAscii = (int) ch;
+
+        System.out.println("The ASCII value of " + ch + " is: " + ascii);
+        
+        // Compute Quotient and Remainder
+        System.out.println("\nTo Compute Quotient and Remainder");
+        int dividend = 25, divisor = 4;
+
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
+
+        System.out.println("dividend = " + dividend);
+        System.out.println("divisor = " + divisor);
+        System.out.println("dividend / divisor = Quotient = " + quotient);
+        System.out.println("dividend % divisor = remainder = " + remainder);
+        
+        //Check if a string is numeric
+        System.out.println("\nCheck if a string is numeric");
+        String string = "12345.15";
+        boolean numeric = true;
+        
+        //numeric = string.matches("-?\\d+(\\.\\d+)?"); //with regex
+        try {
+            Double num = Double.parseDouble(string);
+        } catch (NumberFormatException e) {
+            numeric = false;
+        }
+
+        if(numeric)
+            System.out.println(string + " is a number");
+        else
+            System.out.println(string + " is not a number");
+        
+        //to Convert String to Date
+        System.out.println("\nto Convert String to Date");
+		
+        //2. Print an Integer (Entered by the User)
+		// Creates a reader instance which takes input from standard input - keyboard
+        System.out.println("\nTo print an Integer (Entered by the User)");
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+
+        // nextInt() reads the next integer from the keyboard
+        int number = reader.nextInt();
+
+        // println() prints the following line to the output screen
+        System.out.println("You entered: " + number);
+        
+       
+	}
+
+}
